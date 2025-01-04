@@ -14,9 +14,9 @@ html,body{
     background-attachment: fixed; 
     background-position: center; 
     padding: 0;
-    margin-top: 10px;
-    margin-left: 30px;
-    margin-right: 30px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .headernav{
     display: flex;
