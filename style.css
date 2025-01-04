@@ -1,9 +1,13 @@
 *{
     margin: 0;
     padding:0;
+    box-sizing:border-box;
     font-family: "Poppins", serif;
 }
-body{
+html,body{
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
     background-image: url('background-abstract.png'); 
     background-size: cover; 
     background-repeat: no-repeat; 
