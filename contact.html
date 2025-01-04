@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <style>
+    *{
+    margin: 0;
+    padding:0;
+    font-family: "Poppins", serif;
+}
+body{
+    background-image: url('background-abstract.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.headernav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 50px;
+    color: #ff7200;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+nav ul li {
+    display: inline-block;
+    margin: 0px 10px;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+}
+nav ul li i{
+    margin-right: 5px;
+}
+nav li a::after{
+    content: "";
+    position: absolute;
+    left:0px;
+    bottom: 0px; 
+    width: 0px;
+    height: 2px; 
+    background: #ff7200;
+    transition: width 0.3s ease-in-out;
+}
+nav li a:hover::after{
+    width:100%;
+    
+}
+nav li a:hover{
+    color: #ff7200;
+}
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+#search{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#search > input{
+    height:28px;
+    border: 2px solid #ff7200;
+    border-right: none;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    outline: none;
+    text-indent: 10px;
+    background-color: transparent;
+    color:white;
+}
+#search > input::placeholder{
+    color: rgb(207, 203, 203);
+}
+#search > button{
+    width: 60px;
+    height:32px;
+    color: white;
+    border:5px solid #ff7200;
+    border-left: none;
+    background-color: #ff7200;
+    border: 2px solid #ff7200;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    cursor: pointer;
+}
+.menubar{
+    display: none;
+}
+footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+@media all and (max-width:950px) {
+    .headernav{
+        flex-direction: column;
+    }
+    nav ul li{
+        display: block;
+        align-items: center;
+        padding: 10px 0px;
+        margin: 0px;
+    }
+    #search{
+        padding: 20px;
+    }
+    .logo{
+        align-self: flex-start;
+    }
+    .menubar{
+        display: block;
+        position: absolute;
+        right: 80px;
+        top: 35px;
+    }
+    .menus,#search{
+        display:none;
+    }
+    nav li a::after{
+        content: "";
+        position: absolute;
+        left:0px;
+        bottom:8px; 
+        width: 0px;
+        height: 2px; 
+        background: #ff7200; 
+        transition: width 0.3s ease-in-out;
+    }
+    nav li a:hover::after{
+        width:95%;
+    }
+    #barcross{
+        color: white;
+    }
+}
+    .contact-section {
+      max-width: 650px;
+      margin: 50px auto;
+      background: rgb(0, 0, 0);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1{
+      text-align: center;
+      color:#ff7200;
+      text-shadow:2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    .contact-section h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff7200;
+    }
+
+    .contact-section p {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .inputbox-group {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .inputbox-group label {
+        position: absolute;
+        top: 50%; /* Center the label vertically */
+        left: 15px;
+        transform: translateY(-50%);
+        font-size: 14px;
+        background-color: transparent;
+        color: white;
+        pointer-events: none; /* Prevent label from blocking input interaction */
+        transition: 0.3s ease all;
+        padding: 0 5px;
+    }
+
+    .inputbox-group input,
+    .inputbox-group textarea {
+        width: 95%;
+        height: 35px; 
+        background-color: transparent;
+        outline: none;
+        border: 2px solid #ff7200;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-size: 14px;
+        color: white;
+        margin: 0;
+        text-indent: 5px;
+    }
+
+    textarea.inputbox {
+        height: 100px; /* Set specific height for textarea */
+    }
+
+    .inputbox-group input:focus ~ label,
+    .inputbox-group input:valid ~ label,
+    .inputbox-group textarea:focus ~ label,
+    .inputbox-group textarea:valid ~ label {
+        top: 0px; /* Move label to the top of the input */
+        font-size: 12px;
+        background-color: #000; /* Add background for better visibility */
+        color: #ff7200;
+        padding: 0 5px;
+        border-radius: 3px;
+    }
+
+    .contact-form button {
+        width: 20%;
+        margin-top: 30px; 
+        padding: 7px 15px;  
+        color: white;  
+        border: none; 
+        cursor: pointer;  
+        border-radius: 5px;  
+        background: #ff7200;  
+        border: 2px solid #ff7200;
+    }
+
+    .contact-form button:hover {
+        background-color: #eb8231;
+        border: 2px solid #e28231;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="headernav">
+        <div class="logo"><span>Info</span></div>
+        <div class="menus">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-house"></i>Home</a></li>
+                    <li><a href="Course.html"><i class="fa fa-book"></i>Course</a></li>
+                    <li><a href="Design.html"><i class="fa fa-pen-ruler"></i>Design</a></li>
+                    <li><a href="contact.html"><i class="fa fa-address-book"></i>Contact</a></li>
+                    <li><a href="about.html"><i class="fa fa-circle-info"></i>About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="search" class="menus"><input type="text" placeholder="Type to search"><button class="searchbtn">Search</button></div>
+        <div class="menubar"><a onclick="menubar()"><i class="fa fa-bars" id="barcross"></i></a></div>
+    </div>
+</header>
+  <h1>Contact Us</h1>
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>Have questions or want to work with us? Fill out the form below, and we’ll get back to you soon!</p>
+    <form class="contact-form">
+      <div class="inputbox-group">
+        <input type="text" class="inputbox" id="name" required>
+        <label for="name">Name</label>
+      </div>
+      <div class="inputbox-group">
+        <input type="email" class="inputbox" id="email" required>
+        <label for="email">Email</label>
+      </div>
+      <div class="inputbox-group">
+        <textarea id="message" class="inputbox" required></textarea>
+        <label for="message">Message</label>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2024 Info. All Rights Reserved.</p>
+ </footer>
+<!-- Script -->
+<script>
+  var m = document.getElementsByClassName("menus");
+var bc = document.getElementById("barcross");
+var c = 0;
+
+function menubar() {
+if (c == 0) {
+  m[0].style.display = "block";
+  m[1].style.display = "block";
+  bc.className = "fa-solid fa-x";
+  c = 1;
+} else if (c == 1) {
+  m[0].style.display = "none";
+  m[1].style.display = "none";
+  bc.className = "fa fa-bars";
+  c = 0;
+}
+}
+window.addEventListener("resize", function () {
+if (window.innerWidth > 950) {
+  m[0].style.display = "block"; 
+  m[1].style.display = "flex"; 
+  bc.className = "fa fa-bars fa-1x"; 
+  c = 0; 
+} else if (c == 0) {
+  m[0].style.display = "none";
+  m[1].style.display = "none";
+}
+});
+</script>
+</body>
+</html>

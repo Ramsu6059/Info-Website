@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    *{
+    margin: 0;
+    padding:0;
+    font-family: "Poppins", serif;
+  }
+  body{
+    background-image: url('background-abstract.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .headernav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .logo{
+      font-size: 50px;
+      color: #ff7200;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  nav ul li {
+      display: inline-block;
+      margin: 0px 10px;
+      text-decoration: none;
+      position: relative;
+      font-weight: 500;
+  }
+  nav ul li i{
+      margin-right: 5px;
+  }
+  nav li a::after{
+      content: "";
+      position: absolute;
+      left:0px;
+      bottom: 0px; 
+      width: 0px;
+      height: 2px; 
+      background: #ff7200;
+      transition: width 0.3s ease-in-out;
+  }
+  nav li a:hover::after{
+      width:100%;
+      
+  }
+  nav li a:hover{
+      color: #ff7200;
+  }
+  nav li a{
+      text-decoration: none;
+      color: white;
+  }
+  #search{
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+  }
+  #search > input{
+      height:28px;
+      border: 2px solid #ff7200;
+      border-right: none;
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+      outline: none;
+      text-indent: 10px;
+      background-color: transparent;
+      color:white;
+  }
+  #search > input::placeholder{
+      color: rgb(207, 203, 203);
+  }
+  #search > button{
+      width: 60px;
+      height:32px;
+      color: white;
+      border:5px solid #ff7200;
+      border-left: none;
+      background-color: #ff7200;
+      border: 2px solid #ff7200;
+      border-top-right-radius:5px;
+      border-bottom-right-radius:5px;
+      cursor: pointer;
+  }
+  .menubar{
+      display: none;
+  }
+
+  @media all and (max-width:950px) {
+      .headernav{
+          flex-direction: column;
+      }
+      nav ul li{
+          display: block;
+          align-items: center;
+          padding: 10px 0px;
+          margin: 0px;
+      }
+      #search{
+          padding: 20px;
+      }
+      .logo{
+          align-self: flex-start;
+      }
+      .menubar{
+          display: block;
+          position: absolute;
+          right: 80px;
+          top: 35px;
+      }
+      .menus,#search{
+          display:none;
+      }
+      nav li a::after{
+          content: "";
+          position: absolute;
+          left:0px;
+          bottom:8px; 
+          width: 0px;
+          height: 2px; 
+          background: #ff7200; 
+          transition: width 0.3s ease-in-out;
+      }
+      nav li a:hover::after{
+          width:95%;
+      }
+      #barcross{
+          color: white;
+      }
+  }
+    .design-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .design-section h2,h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color:#ff7200;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .design-section p {
+      font-size: 1rem;
+      color: #ffffff;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .design-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .design-card {
+      background: rgb(0, 0, 0);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+    }
+
+    .design-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .design-card h3 {
+      font-size: 1.5rem;
+      margin: 15px 0;
+      color:#ff7200;
+    }
+
+    .design-card p {
+      font-size: 1rem;
+      color: #ffffff;
+      padding: 0 15px 15px;
+    }
+    .explore{
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding: 7px 15px;  
+      color: white;  
+      border: none; 
+      cursor: pointer;  
+      border-radius: 5px;  
+      background: #ff7200;  
+      border: 2px solid #ff7200;
+    }
+    .explore:hover{
+      background-color: #eb8231;
+      border: 2px solid #e28231;
+    }
+    footer {
+      width: 100%;
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="headernav">
+        <div class="logo"><span>Info</span></div>
+        <div class="menus">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-house"></i>Home</a></li>
+                    <li><a href="Course.html"><i class="fa fa-book"></i>Course</a></li>
+                    <li><a href="Design.html"><i class="fa fa-pen-ruler"></i>Design</a></li>
+                    <li><a href="contact.html"><i class="fa fa-address-book"></i>Contact</a></li>
+                    <li><a href="about.html"><i class="fa fa-circle-info"></i>About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="search" class="menus"><input type="text" placeholder="Type to search"><button class="searchbtn">Search</button></div>
+        <div class="menubar"><a onclick="menubar()"><i class="fa fa-bars" id="barcross"></i></a></div>
+    </div>
+</header>
+  <section class="design-section"> 
+    <h2>Our Designs <br>Creative Solutions for Your Needs</h2>
+    <p>Browse through some of our best designs crafted with passion and precision.</p>
+    <div class="design-gallery">
+      <div class="design-card">
+        <img src="morden website.jpg" alt="Design 1">
+        <h3>Modern Website</h3>
+        <p>Sleek and responsive web design for businesses.</p>
+        <button class="explore" onclick="location.href='signup.html';">Explore</button>
+      </div>
+      <div class="design-card">
+        <img src="Cutom logo.jpg" alt="Design 2">
+        <h3>Custom Logo</h3>
+        <p>Unique logos tailored to your brand identity.</p>
+        <button class="explore" onclick="location.href='signup.html';">Explore</button>
+      </div>
+      <div class="design-card">
+        <img src="ux-ui-design.jpg" alt="Design 3">
+        <h3>UI/UX Designs</h3>
+        <p>Interactive and user-friendly interfaces.</p>
+        <button class="explore" onclick="location.href='signup.html';">Explore</button>
+      </div>
+      <div class="design-card">
+        <img src="grapic.jpg" alt="Design 4">
+        <h3>Graphic Illustrations</h3>
+        <p>Creative designs for marketing materials.</p>
+        <button class="explore" onclick="location.href='signup.html';">Explore</button>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2024 Info. All Rights Reserved.</p>
+  </footer>
+  <!-- Script -->
+<script>
+  var m = document.getElementsByClassName("menus");
+var bc = document.getElementById("barcross");
+var c = 0;
+
+function menubar() {
+if (c == 0) {
+  m[0].style.display = "block";
+  m[1].style.display = "block";
+  bc.className = "fa-solid fa-x";
+  c = 1;
+} else if (c == 1) {
+  m[0].style.display = "none";
+  m[1].style.display = "none";
+  bc.className = "fa fa-bars";
+  c = 0;
+}
+}
+window.addEventListener("resize", function () {
+if (window.innerWidth > 950) {
+  m[0].style.display = "block"; 
+  m[1].style.display = "flex"; 
+  bc.className = "fa fa-bars fa-1x"; 
+  c = 0; 
+} else if (c == 0) {
+  m[0].style.display = "none";
+  m[1].style.display = "none";
+}
+});
+</script>
+</body>
+</html>
