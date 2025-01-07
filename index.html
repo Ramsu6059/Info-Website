@@ -41,17 +41,17 @@
         <button class="joinbtn" onclick="redirectToPage('signup.html')">Join us</button>
     </div>
     <div class="loginform">
-        <form>
+        <form action="willgetcall.html" onsubmit="return validate()">
             <h3>Login Here</h3>
             <div class="inputbox-group">
-                <input class="inputbox" type="text" required>
-                <label>Enter Email Here</label>
+                <input class="inputbox" id="email" type="text">
+                <label id="emailL">Enter Email Here</label>
             </div>
             <div class="inputbox-group">
-                <input class="inputbox" type="password" required>
+                <input class="inputbox" type="password">
                 <label>Enter Password Here</label>
             </div>
-            <input class="inputloginbtn" type="button" value="Login" onclick="redirectToPage('login.html')">
+            <input class="inputloginbtn" type="submit" value="Login">
             <p class="formpara">Don't have an account?<br>
                 <a href="signup.html">Sign up</a> here
             </p>
@@ -253,7 +253,32 @@
 
 <!-- Script -->
 <script>
-        var m = document.getElementsByClassName("menus");
+var email = document.getElementById("email");
+var emailL = document.getElementById("emailL");
+var expEmail = /^[A-Za-z0-9]+@[a-z0-9]+\.[a-zA-Z]{2,}$/;
+function validate(){
+  if (email.value == "") {
+      emailL.innerHTML = "* Enter an Email";
+      emailL.style.color = "red";
+      email.style.border = "1px solid red";
+      return false;
+  } 
+  else if (!expEmail.test(email.value)) {
+      emailL.innerHTML = "* Enter a valid Email";
+      emailL.style.color = "red";
+      email.style.border = "1px solid red";
+      return false;
+  } else {
+      emailL.innerHTML = "Email";
+      email.style.border = "";
+      emailL.style.color = "white";
+  }
+  return true;
+}
+  
+//menus bar
+
+var m = document.getElementsByClassName("menus");
 var bc = document.getElementById("barcross");
 var c = 0;
 
